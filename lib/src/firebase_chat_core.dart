@@ -366,7 +366,7 @@ class FirebaseChatCore {
         id: '',
         partialText: partialMessage,
         showStatus: true,
-        status: null,
+        status: types.Status.seen,
       );
     }
 
