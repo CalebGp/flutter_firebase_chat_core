@@ -344,7 +344,6 @@ class FirebaseChatCore {
         author: types.User(id: firebaseUser!.uid),
         id: '',
         partialCustom: partialMessage,
-        status: types.Status.sending,
         showStatus: true,
       );
     } else if (partialMessage is types.PartialFile) {
@@ -352,7 +351,6 @@ class FirebaseChatCore {
         author: types.User(id: firebaseUser!.uid),
         id: '',
         partialFile: partialMessage,
-        status: types.Status.sending,
         showStatus: true,
       );
     } else if (partialMessage is types.PartialImage) {
@@ -360,7 +358,6 @@ class FirebaseChatCore {
         author: types.User(id: firebaseUser!.uid),
         id: '',
         partialImage: partialMessage,
-        status: types.Status.sending,
         showStatus: true,
       );
     } else if (partialMessage is types.PartialText) {
@@ -368,7 +365,6 @@ class FirebaseChatCore {
         author: types.User(id: firebaseUser!.uid),
         id: '',
         partialText: partialMessage,
-        status: types.Status.sending,
         showStatus: true,
       );
     }
