@@ -366,6 +366,7 @@ class FirebaseChatCore {
         id: '',
         partialText: partialMessage,
         showStatus: true,
+        status: null,
       );
     }
 
@@ -389,7 +390,10 @@ class FirebaseChatCore {
 
   /// Updates a message in the Firestore. Accepts any message and a
   /// room ID. Message will probably be taken from the [messages] stream.
-  void updateMessage(types.Message message, String roomId) async {
+  void updateMessage(
+    types.Message message,
+    String roomId,
+  ) async {
     if (firebaseUser == null) return;
     if (message.author.id != firebaseUser!.uid) return;
 
